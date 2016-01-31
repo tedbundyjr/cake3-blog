@@ -25,8 +25,6 @@ class ArticlesController extends AppController
      */
     public function index()
     {
-        // $this->set('articles', $this->paginate($this->Articles));
-        // $this->set('_serialize', ['articles']);
         $articles = $this->Articles->find('all');
         $this->set(compact('articles'));
     }
@@ -40,11 +38,6 @@ class ArticlesController extends AppController
      */
     public function view($id = null)
     {
-        // $article = $this->Articles->get($id, [
-        //     'contain' => []
-        // ]);
-        // $this->set('article', $article);
-        // $this->set('_serialize', ['article']);
         $article = $this->Articles->get($id);
         $this->set(compact('article'));
     }
@@ -56,18 +49,6 @@ class ArticlesController extends AppController
      */
     public function add()
     {
-        // $article = $this->Articles->newEntity();
-        // if ($this->request->is('post')) {
-        //     $article = $this->Articles->patchEntity($article, $this->request->data);
-        //     if ($this->Articles->save($article)) {
-        //         $this->Flash->success(__('The article has been saved.'));
-        //         return $this->redirect(['action' => 'index']);
-        //     } else {
-        //         $this->Flash->error(__('The article could not be saved. Please, try again.'));
-        //     }
-        // }
-        // $this->set(compact('article'));
-        // $this->set('_serialize', ['article']);
         $article = $this->Articles->newEntity();
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->data);
