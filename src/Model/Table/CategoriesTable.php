@@ -59,15 +59,15 @@ class CategoriesTable extends Table
             ->add('id', 'valid', ['rule' => 'numeric'])
             ->allowEmpty('id', 'create');
 
-        $validator
-            ->add('lft', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('lft', 'create')
-            ->notEmpty('lft');
+        // $validator
+        //     ->add('lft', 'valid', ['rule' => 'numeric'])
+        //     ->requirePresence('lft', 'create')
+        //     ->notEmpty('lft');
 
-        $validator
-            ->add('rght', 'valid', ['rule' => 'numeric'])
-            ->requirePresence('rght', 'create')
-            ->notEmpty('rght');
+        // $validator
+        //     ->add('rght', 'valid', ['rule' => 'numeric'])
+        //     ->requirePresence('rght', 'create')
+        //     ->notEmpty('rght');
 
         $validator
             ->requirePresence('name', 'create')
